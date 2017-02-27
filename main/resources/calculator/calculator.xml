@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="KateCalculator" verbose="1" parallel="methods" thread-count="2">
+    <!--<groups>-->
+        <!--<run>-->
+            <!--<include name="createCalculator"/>-->
+            <!--<include name="DivEvenNumber"/>-->
+            <!--<include name="OperationWithZero"/>-->
+        <!--</run>-->
+    <!--</groups>-->
+    <test name="Positive Tests">
+        <parameter name="firstL" value="2"></parameter>
+        <parameter name="secondL" value="3"></parameter>
+        <parameter name="expectedL" value="5"></parameter>
+        <classes>
+            <class name="PositiveUnitTests">
+            </class>
+        </classes>
+    </test>
+
+    <test name="NegativeUnitTest">
+        <parameter name="firstL" value="-2"></parameter>
+        <parameter name="secondL" value="-3"></parameter>
+        <parameter name="expectedL" value="-5"></parameter>
+        <classes>
+            <class name="NegativeUnitTests"></class>
+        </classes>
+    </test>
+</suite>
+
